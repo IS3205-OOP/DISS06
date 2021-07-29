@@ -15,4 +15,15 @@ public class Map {
 		arena = new Pirate[width][height];
 	}
 	
+	public boolean addPirate(int x, int y, Pirate newPirate) {
+		if(x >= 0 && x < arena.length 
+				&& y >= 0 && y < arena[0].length
+				&& arena[x][y] == null && newPirate != null
+				) {
+			arena[x][y] = newPirate;
+			return true;
+		}
+		return false;
+	}
+	
 }

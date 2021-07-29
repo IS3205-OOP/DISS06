@@ -12,6 +12,23 @@ public class TestMap {
 		
 		map.arena[4][4] = new Pirate("Curi", 3);
 		printArena(map);
+		
+		boolean success = 
+				map.addPirate(0, 4, new Pirate("Daging", 6));
+		if(success) {
+			System.out.println("Add Successful");
+		} else {
+			System.out.println("Add Failed");
+		}
+		printArena(map);
+		
+		success = map.addPirate(4, 1, null);
+		if(success) {
+			System.out.println("Add Successful");
+		} else {
+			System.out.println("Add Failed");
+		}
+		printArena(map);
 	}
 	
 	public static void printArena(Map map) {
